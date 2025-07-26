@@ -4,7 +4,7 @@
 #include <string.h>
 
 #ifndef _UART_C
-#define _UATRT_C
+#define _UART_C
 
 typedef enum 
 {
@@ -36,6 +36,7 @@ void UART_init(uint32_t uart, uart_handle_t *handle);
 // write
 void UART_write(uart_handle_t *handle, uint8_t data);
 void UART_writeBytes(uart_handle_t *handle, char *data);
+void UART_println(uart_handle_t *handle, char *data);
 void echo(uart_handle_t *handle);
 
 

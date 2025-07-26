@@ -5,6 +5,8 @@ BUILD_DIR = bin
 CFILES = src/main.c
 CFILES += src/uart.c
 CFILES += src/buffer.c
+CFILES += src/rtc.c
+CFILES += src/logger.c
 #AFILES += api-asm.S
 
 # TODO - you will need to edit these two lines!
@@ -24,3 +26,5 @@ clean:
 	rm -f $(BUILD_DIR)/*.o
 	rm -f $(BUILD_DIR)/src/*.o
 	rm -f $(BUILD_DIR)/src/*.d
+	rm -f $(PROJECT).elf
+	rm -f $(PROJECT).bin

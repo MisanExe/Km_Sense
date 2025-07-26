@@ -66,6 +66,11 @@ void UART_writeBytes(uart_handle_t *handle, char *data)
         usart_send_blocking(handle->uart, (uint16_t)data[i]);
     }
 }
+void UART_println(uart_handle_t *handle, char *data)
+{
+    UART_writeBytes(handle, data);
+    UART_writeBytes(handle, "\n\r");
+}
 
 
 void echo(uart_handle_t *handle)
